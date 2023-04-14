@@ -1,0 +1,60 @@
+POST http://localhost:3000/api/despesas HTTP/1:1
+content-type: application/json
+
+{
+    "descricao_despesas": "teste",
+    "valor": 100,
+    "data_compra": "2023-05-15",
+    "tipo_pagamento_id": 3,
+    "categoria_id": "788c0b65-74f2-4b9e-9199-4e343027ae0c",
+    "cep": "08725405",
+    "numero":123
+}
+
+### 
+PUT http://localhost:3000/api/despesas/fcb6d3b1-974d-4722-a906-2d572e09bb1c HTTP/1:1
+content-type: application/json
+
+{
+    "descricao_despesas": "teste",
+    "valor": 101,
+    "data_compra": "2023-04-03",
+    "tipo_pagamento_id": 2,
+    "categoria_id": "788c0b65-74f2-4b9e-9199-4e343027ae0c"
+}
+
+###
+PATCH http://localhost:3000/api/despesas/fcb6d3b1-974d-4722-a906-2d572e09bb1c HTTP/1:1
+content-type: application/json
+
+{
+    "valor": 104
+}
+
+###
+DELETE http://localhost:3000/api/despesas/10a5e787-c351-4a7d-b3d9-f188ef916487 HTTP/1:1
+
+###
+POST http://localhost:3000/api/categorias HTTP/1:1
+content-type: application/json
+
+{
+    "nome": "shopping",
+    "descricao": "gastos com compras"
+} 
+
+
+###
+GET http://localhost:3000/api/despesas/report?dataInicial=2023-04-01&dataFinal=2023-04-30
+
+### 
+GET http://localhost:3000/api/despesas/planilha
+
+
+
+###
+GET http://localhost:3000/api/despesas/list?page=1&limit=5
+
+
+###
+GET http://localhost:3000/api/categorias/ 
